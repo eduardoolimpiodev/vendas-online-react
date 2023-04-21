@@ -1,20 +1,18 @@
 import './App.css';
 
+import { Button, Space } from 'antd';
 import { useState } from 'react';
+import styled from 'styled-components';
 
 import viteLogo from '/vite.svg';
 
 import reactLogo from './assets/react.svg';
 
-import styled from 'styled-components';
-
-import { Button, Space } from 'antd';
-
 function App() {
   const [count, setCount] = useState(0);
 
   return (
-    <StyledLink className="App">
+    <StyledLink isBlue={count > 4} className="App">
       <div>
         <a href="https://vitejs.dev" target="_blank" rel="noreferrer">
           <img src={viteLogo} className="logo" alt="Vite logo" />
@@ -25,7 +23,9 @@ function App() {
       </div>
       <h1>Vite + React</h1>
       <div className="card">
-        <Button type="primary" onClick={() => setCount((count) => count + 1)}>count is {count}</Button>
+        <Button type="primary" onClick={() => setCount((count) => count + 1)}>
+          count is {count}
+        </Button>
         <p>
           Edit <code>src/App.tsx</code> and save to test HMR
         </p>
@@ -35,10 +35,13 @@ function App() {
   );
 }
 
-const StyledLink = styled.div`
-  color: pink;
+interface PStyledLink {
+  isBlue?: boolean;
+}
+
+const StyledLink = styled.div<PStyledLink>`
+  color: ${props => props.isBlue ? 'blue' : 'pink'};
   font-weight: bold;
 `;
-
 
 export default App;
