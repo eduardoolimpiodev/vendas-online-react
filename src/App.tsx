@@ -1,5 +1,3 @@
-
-
 import { Button, Space } from 'antd';
 import { useState } from 'react';
 import styled from 'styled-components';
@@ -14,9 +12,7 @@ function App() {
   return (
     <div>
       <header>
-        <h1>
-          teste
-        </h1> 
+        <h1>teste</h1>
       </header>
       <div>
         <p>teste</p>
@@ -25,6 +21,5 @@ function App() {
     </div>
   );
 }
-
 
 export default App;
