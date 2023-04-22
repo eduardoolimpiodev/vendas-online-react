@@ -1,3 +1,4 @@
+import Input from '../../../shared/inputs/input/input';
 import {
   BackGroundImage,
   ContainerLogin,
@@ -9,12 +10,13 @@ import {
 const LoginScreen = () => {
   return (
     <ContainerLoginScreen>
-      <BackGroundImage src="./bg.png" />
       <ContainerLogin>
         <LimitedContainer>
           <LogoImage src="./logo2.png" />
+          <Input />
         </LimitedContainer>
       </ContainerLogin>
+      <BackGroundImage src="./bg.png" />
     </ContainerLoginScreen>
   );
 };
