@@ -1,10 +1,10 @@
+import { BackGroundImage } from '../styles/loginScreen.styles';
 
 const LoginScreen = () => {
-  return (
-    <div>
-      test
-    </div>
-  )
-}
+  return ( 
+  <div>
+        <BackGroundImage src="./bg.png" />
+  </div>);
+};
 
-export default LoginScreen
+export default LoginScreen;
